@@ -7,7 +7,7 @@ local input = "hello"
 local sl = "en"
 local tl = "fr"
 local function make_url(input, sl, tl)
-   return 'https://translate.googleapis.com/translate_a/single?client=gtx&sl='.. sl ..'&tl='.. tl ..'&dt=t&q='.. url.escape(input)
+   return 'http://translate.googleapis.com/translate_a/single?client=gtx&sl='.. sl ..'&tl='.. tl ..'&dt=t&q='.. url.escape(input)
 end
 local reply = http.request(make_url(input,sl,tl))
 local data = json.decode(reply)
